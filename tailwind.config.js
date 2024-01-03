@@ -12,10 +12,11 @@ export default {
       fontFamily: {
         Kumbh: "Kumbh"
       },
-      fontSize:{
+      fontWeight:{
         400: "400",
         700: "700"
-      }
+      },
+      
     },
   },
   plugins: [
