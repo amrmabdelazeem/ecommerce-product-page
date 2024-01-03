@@ -39,7 +39,7 @@ export default function Nav() {
           alt="avatar"
         />
       </div>
-      <div className={`absolute w-60 h-full bg-white left-0 top-0 p-6 pt-7 ${isClicked ? 'visible' : 'hidden'}`}>
+      <div className={`absolute w-60 h-200 bg-lightBlue left-0 top-0 p-6 pt-7 ${isClicked ? 'visible' : 'hidden'} z-10`}>
       <button onClick={handleClick}>
       <img className="size-5 mb-10" src="src/assets/images/icon-close.svg" alt="close-icon"/>
       </button>
