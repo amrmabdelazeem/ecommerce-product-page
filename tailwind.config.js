@@ -10,7 +10,7 @@ export default {
         secondary:"hsl(25, 100%, 94%)",
       },
       fontFamily: {
-        Kumbh: "Kumbh"
+        Kumbh: "Kumbh Sans"
       },
       fontWeight:{
         400: "400",
