@@ -19,13 +19,6 @@ export default function Carousel() {
   }
   return (
     <section id="carousel" className="relative w-full h-80">
-      <div className="absolute bg-white w-95 h-72 z-10 top-0 m-2 rounded-xl">
-        <h2 className="font-700 p-5">Cart</h2>
-        <div id="cart-items" className="border-t-2 grid place-content-center h-4/6">
-            {/* here we will display the cart items */}
-            <p className="justify-items-center items-center font-700 text-base text-gray-600">Your Cart is empty</p>
-        </div>
-      </div>
       <img
         src={`src/assets/images/image-product-${index}.jpg`}
         alt={`product-${index}`}

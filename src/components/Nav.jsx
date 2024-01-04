@@ -8,9 +8,23 @@ export default function Nav() {
     setIsClicked(!isClicked);
   }
   return (
-    <nav className={`bg-white border-gray-200 flex justify-between p-6 `}>
-      <div className="flex items-center gap-5">
-        <button onClick={handleClick}>
+    <nav className={`bg-white border-gray-200 flex justify-between `}>
+    {/*Cart Component to move seprately start*/}
+      <div className="absolute bg-white w-95 h-72 z-10 top-20 m-2 rounded-xl">
+        <h2 className="font-700 p-5">Cart</h2>
+        <div
+          id="cart-items"
+          className="border-t-2 grid place-content-center h-4/6"
+        >
+          {/* here we will display the cart items */}
+          <p className="justify-items-center items-center font-700 text-base text-gray-600">
+            Your Cart is empty
+          </p>
+        </div>
+      </div>
+      {/*Cart Component to move seprately end*/}
+      <div className="flex items-center gap-5 p-6">
+        <button>
           <img
             className="size-4"
             src="src/assets/images/icon-menu.svg"
@@ -25,8 +39,8 @@ export default function Nav() {
           />
         </a>
       </div>
-      <div className="flex items-center gap-5">
-        <button>
+      <div className="flex items-center gap-5 p-6">
+        <button onClick={handleClick}>
           <img
             className="size-7"
             src="src/assets/images/icon-cart.svg"
