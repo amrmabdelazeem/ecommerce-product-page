@@ -2,12 +2,10 @@
 import { products } from "../products";
 import Button from "./Button";
 
-
-export default function Checkout({ checkout, count }) {
-
+export default function Checkout({ cartNotify, count, onDelete }) {
   return (
     <>
-      {checkout ? (
+      {cartNotify ? (
         <div
           id="cart-items"
           className="border-t-2 grid grid-cart grid-rows-2 place-content-center place-items-center h-3/4 p-4 "
@@ -20,10 +18,13 @@ export default function Checkout({ checkout, count }) {
           <div id="cart-items">
             <p className="text-gray-400 mb-1">{products.product_name}</p>
             <p className="text-gray-400">
-              ${(products.final_price)} x {count} <span className="text-black font-700">${(count * parseInt(products.final_price)).toFixed(2)}</span>
+              ${products.final_price} x {count}{" "}
+              <span className="text-black font-700">
+                ${(count * parseInt(products.final_price)).toFixed(2)}
+              </span>
             </p>
           </div>
-          <button>
+          <button onClick={onDelete}>
             <svg
               className="fill-gray-300 size-5 justify-self-end"
               viewBox="0 0 20 20"

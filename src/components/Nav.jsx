@@ -2,21 +2,25 @@
 import { useState } from "react";
 import Cart from "./Cart";
 
-export default function Nav({cartNotify, count}) {
+export default function Nav({ cartNotify, count, onDelete }) {
   const [isClicked, setIsClicked] = useState(false);
   const [isCart, setIsCart] = useState(false);
-
 
   function handleSideMenu() {
     setIsClicked(!isClicked);
   }
 
-  function handleCart(){
+  function handleCart() {
     setIsCart(!isCart);
   }
   return (
     <nav className={`bg-white border-gray-200 flex justify-between `}>
-    <Cart toggleCart={isCart} checkout = {cartNotify} count = {count}/>
+      <Cart
+        toggleCart={isCart}
+        cartNotify={cartNotify}
+        count={count}
+        onDelete={onDelete}
+      />
       <div className="flex items-center gap-5 p-6">
         <button onClick={handleSideMenu}>
           <img
@@ -40,7 +44,13 @@ export default function Nav({cartNotify, count}) {
             src="src/assets/images/icon-cart.svg"
             alt="icon-cart"
           />
-          <span className={`absolute bg-primary w-6 h-4 rounded-lg -top-1 text-xs text-white ${cartNotify ? 'visible' : 'hidden'}`}>{count}</span>
+          <span
+            className={`absolute bg-primary w-6 h-4 rounded-lg -top-1 text-xs text-white ${
+              cartNotify ? "visible" : "hidden"
+            }`}
+          >
+            {count}
+          </span>
         </button>
         <img
           className="size-7"

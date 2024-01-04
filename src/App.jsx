@@ -13,6 +13,9 @@ export default function App() {
     }
   }
 
+  function handleDelete(){
+    setCartState(false);
+  }
   function handleIncrease() {
     setCount(count + 1);
     setCartState(false);
@@ -26,7 +29,7 @@ export default function App() {
 
   return (
     <>
-      <Nav cartNotify={cartState} count={count}/>
+      <Nav cartNotify={cartState} count={count} onDelete={handleDelete}/>
       <Carousel />
       <Product onIncrease = {handleIncrease} onDecrease = {handleDecrease} count={count} onCart={handleCartItems}/>
     </>
