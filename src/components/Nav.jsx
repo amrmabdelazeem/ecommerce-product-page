@@ -6,7 +6,7 @@ export default function Nav({cartNotify, count}) {
   const [isCart, setIsCart] = useState(false);
 
 
-  function handleClick() {
+  function handleSideMenu() {
     setIsClicked(!isClicked);
   }
 
@@ -17,7 +17,7 @@ export default function Nav({cartNotify, count}) {
     <nav className={`bg-white border-gray-200 flex justify-between `}>
     <Cart toggleCart={isCart}/>
       <div className="flex items-center gap-5 p-6">
-        <button>
+        <button onClick={handleSideMenu}>
           <img
             className="size-4"
             src="src/assets/images/icon-menu.svg"
@@ -48,11 +48,11 @@ export default function Nav({cartNotify, count}) {
         />
       </div>
       <div
-        className={`absolute w-60 h-200 bg-lightBlue left-0 top-0 p-6 pt-7 ${
+        className={`absolute w-60 h-150 bg-lightBlue left-0 top-0 p-6 pt-7 ${
           isClicked ? "visible" : "hidden"
         } z-10`}
       >
-        <button onClick={handleClick}>
+        <button onClick={handleSideMenu}>
           <img
             className="size-5 mb-10"
             src="src/assets/images/icon-close.svg"
