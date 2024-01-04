@@ -5,6 +5,11 @@ import Product from "./components/Product";
 
 export default function App() {
   const [count, setCount] = useState(0);
+  const[cartState, setCartState] = useState(false);
+  
+  function handleCartItems(){
+    setCartState(!cartState);
+  }
 
   function handleIncrease() {
     setCount(count + 1);
@@ -17,9 +22,9 @@ export default function App() {
 
   return (
     <>
-      <Nav />
+      <Nav cartNotify={cartState} count={count}/>
       <Carousel />
-      <Product onIncrease = {handleIncrease} onDecrease = {handleDecrease} count={count}/>
+      <Product onIncrease = {handleIncrease} onDecrease = {handleDecrease} count={count} onCart={handleCartItems}/>
     </>
   );
 }

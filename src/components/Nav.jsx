@@ -1,9 +1,10 @@
 import { useState } from "react";
 import Cart from "./Cart";
 
-export default function Nav() {
+export default function Nav({cartNotify, count}) {
   const [isClicked, setIsClicked] = useState(false);
   const [isCart, setIsCart] = useState(false);
+
 
   function handleClick() {
     setIsClicked(!isClicked);
@@ -38,7 +39,7 @@ export default function Nav() {
             src="src/assets/images/icon-cart.svg"
             alt="icon-cart"
           />
-          <span className="absolute bg-primary w-6 h-4 rounded-lg -top-1 text-xs text-white">0</span>
+          <span className={`absolute bg-primary w-6 h-4 rounded-lg -top-1 text-xs text-white ${cartNotify ? 'visible' : 'hidden'}`}>{count}</span>
         </button>
         <img
           className="size-7"
