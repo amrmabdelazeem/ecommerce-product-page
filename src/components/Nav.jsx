@@ -1,27 +1,20 @@
 import { useState } from "react";
+import Cart from "./Cart";
 
 export default function Nav() {
   const [isClicked, setIsClicked] = useState(false);
+  const [isCart, setIsCart] = useState(false);
 
   function handleClick() {
     setIsClicked(!isClicked);
   }
+
+  function handleCart(){
+    setIsCart(!isCart);
+  }
   return (
     <nav className={`bg-white border-gray-200 flex justify-between `}>
-    {/*Cart Component to move seprately start*/}
-      <div className="absolute bg-white w-95 h-72 z-10 top-20 m-2 rounded-xl">
-        <h2 className="font-700 p-5">Cart</h2>
-        <div
-          id="cart-items"
-          className="border-t-2 grid place-content-center h-4/6"
-        >
-          {/* here we will display the cart items */}
-          <p className="justify-items-center items-center font-700 text-base text-gray-600">
-            Your Cart is empty
-          </p>
-        </div>
-      </div>
-      {/*Cart Component to move seprately end*/}
+    <Cart toggleCart={isCart}/>
       <div className="flex items-center gap-5 p-6">
         <button>
           <img
@@ -39,12 +32,13 @@ export default function Nav() {
         </a>
       </div>
       <div className="flex items-center gap-5 p-6">
-        <button onClick={handleClick}>
+        <button className="relative" onClick={handleCart}>
           <img
             className="size-7"
             src="src/assets/images/icon-cart.svg"
             alt="icon-cart"
           />
+          <span className="absolute bg-primary w-6 h-4 rounded-lg -top-1 text-xs text-white">0</span>
         </button>
         <img
           className="size-7"

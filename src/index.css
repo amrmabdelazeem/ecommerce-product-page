@@ -3,3 +3,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.grid-cart{
+    grid-template-columns: 70px 1fr 30px;
+}
