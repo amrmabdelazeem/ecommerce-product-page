@@ -9,7 +9,7 @@ export default function App() {
   
   function handleCartItems(){
     if(count > 0){
-      setCartState(!cartState);
+      setCartState(true);
     }
   }
 

@@ -15,7 +15,7 @@ export default function Nav({ cartNotify, count, onDelete }) {
   }
   return (
     <nav className={`bg-white border-gray-200 flex justify-between`}>
-      <div className={`absolute w-screen h-160 bg-black opacity-55 top-0 left-0 z-10 ${isClicked ? "visible" : "hidden"}`}></div>
+      <div className={`absolute w-screen h-160 bg-black opacity-55 top-0 left-0 z-20 ${isClicked ? "visible" : "hidden"}`}></div>
 
       <Cart
         toggleCart={isCart}
@@ -63,7 +63,7 @@ export default function Nav({ cartNotify, count, onDelete }) {
       <div
         className={`absolute w-60 h-160 bg-lightBlue left-0 top-0 p-6 pt-7 ${
           isClicked ? "visible" : "hidden"
-        } z-10`}
+        } z-20`}
       >
         <button onClick={handleSideMenu}>
           <img
