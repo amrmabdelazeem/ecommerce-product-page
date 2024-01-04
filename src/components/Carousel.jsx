@@ -18,7 +18,7 @@ export default function Carousel() {
     }
   }
   return (
-    <section id="carousel" className="relative w-full h-80 -z-10">
+    <section id="carousel" className="relative w-full h-80">
       <img
         src={`src/assets/images/image-product-${index}.jpg`}
         alt={`product-${index}`}
@@ -26,7 +26,7 @@ export default function Carousel() {
       />
       <button
         onClick={handleNext}
-        className="absolute top-1/2 right-5 size-6 bg-white rounded-full flex items-center justify-center"
+        className="absolute top-1/2 right-5 size-6 bg-white rounded-full flex items-center justify-center z-0"
       >
         <img
           src="src/assets/images/icon-next.svg"
@@ -36,7 +36,7 @@ export default function Carousel() {
       </button>
       <button
         onClick={handlePrev}
-        className="absolute top-1/2 left-5 size-6 bg-white rounded-full flex items-center justify-center"
+        className="absolute top-1/2 left-5 size-6 bg-white rounded-full flex items-center justify-center z-0"
       >
         <img
           src="src/assets/images/icon-previous.svg"
