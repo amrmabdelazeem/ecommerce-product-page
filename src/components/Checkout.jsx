@@ -8,8 +8,8 @@ export default function Checkout() {
         src="src/assets/images/image-product-1-thumbnail.jpg"
         alt="product-thumbnail"
       />
-      <div id="cart-items" className="">
-        <p className="text-gray-400">Fall Limited Edition Sneakers</p>
+      <div id="cart-items">
+        <p className="text-gray-400 mb-1">Fall Limited Edition Sneakers</p>
         <p className="text-gray-400">
           $125.00 x 3 <span className="text-black font-700">$375.00</span>
         </p>

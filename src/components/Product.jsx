@@ -1,17 +1,8 @@
-import { useState } from "react";
+/* eslint-disable react/prop-types */
 import Button from "./Button";
 
-export default function Product() {
-  const [count, setCount] = useState(0);
+export default function Product({onIncrease, onDecrease, count}) {
 
-  function handleIncrease() {
-    setCount(count + 1);
-  }
-  function handleDecrease() {
-    if (count > 0) {
-      setCount(count - 1);
-    }
-  }
   return (
     <section className="p-6">
       <p className="font-700 text-xs tracking-widest text-primary mb-3">
@@ -38,7 +29,7 @@ export default function Product() {
         id="products-count"
         className=" max-w-xs w-full h-14 bg-gray-100 rounded-xl flex justify-between items-center px-5 mb-4"
       >
-        <button onClick={handleDecrease}>
+        <button onClick={onDecrease}>
           <img
             src="src/assets/images/icon-minus.svg"
             alt="icon-minus"
@@ -46,7 +37,7 @@ export default function Product() {
           />
         </button>
         <span className="font-700">{count}</span>
-        <button onClick={handleIncrease}>
+        <button onClick={onIncrease}>
           <img
             src="src/assets/images/icon-plus.svg"
             alt="icon-plus"
