@@ -19,6 +19,9 @@ export default {
       },
       height:{
         200: "200%"
+      },
+      width:{
+        95 : "95%"
       }
     },
   },
