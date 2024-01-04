@@ -1,32 +1,27 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
 import Button from "./Button";
+import { products } from "../products";
 
 export default function Product({onIncrease, onDecrease, count, onCart}) {
   
-
-
-
   return (
     <section className="p-6">
       <p className="font-700 text-xs tracking-widest text-primary mb-3">
-        SNEAKER COMPANY
+        {products.company}
       </p>
-      <h1 className="font-700 text-3xl mb-3">Fall Limited Edition Sneakers</h1>
+      <h1 className="font-700 text-3xl mb-3">{products.product_name}</h1>
       <p className="text-gray-500 text-sm mb-5">
-        These low-profile sneakers are your perfect casual wear companion.
-        Featuring a durable rubber outer sole, they’ll withstand everything the
-        weather can offer.
+      {products.description}
       </p>
       <div id="price" className="flex justify-between items-center mb-5">
         <div id="discount-price" className="flex items-center gap-4">
-          <h2 className="font-700 text-2xl">$125.00</h2>
+          <h2 className="font-700 text-2xl">${products.final_price}</h2>
           <span className="font-700 text-sm bg-secondary text-primary px-2 py-0.5 rounded-md">
-            50%
+            {products.discount}%
           </span>
         </div>
         <div id="original-price">
-          <p className="font-700 line-through text-sm text-gray-400">$250.00</p>
+          <p className="font-700 line-through text-sm text-gray-400">${products.price_before}</p>
         </div>
       </div>
       <div

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import Cart from "./Cart";
 
@@ -15,7 +16,7 @@ export default function Nav({cartNotify, count}) {
   }
   return (
     <nav className={`bg-white border-gray-200 flex justify-between `}>
-    <Cart toggleCart={isCart} checkout = {cartNotify}/>
+    <Cart toggleCart={isCart} checkout = {cartNotify} count = {count}/>
       <div className="flex items-center gap-5 p-6">
         <button onClick={handleSideMenu}>
           <img
