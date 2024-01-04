@@ -18,7 +18,7 @@ export default function Carousel() {
     }
   }
   return (
-    <section id="carousel" className="relative w-full h-80">
+    <section id="carousel" className="relative w-full h-80 -z-10">
       <img
         src={`src/assets/images/image-product-${index}.jpg`}
         alt={`product-${index}`}

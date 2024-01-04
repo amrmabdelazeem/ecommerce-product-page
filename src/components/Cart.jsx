@@ -4,7 +4,7 @@ import Checkout from "./Checkout";
 export default function Cart({ toggleCart, cartNotify, count, onDelete }) {
   return (
     <div
-      className={`max-w-sm absolute bg-white w-95 h-72 z-10 top-20 m-2 rounded-xl ${
+      className={`max-w-sm absolute bg-white w-95 h-72 top-20 m-2 rounded-xl ${
         toggleCart ? "visible" : "hidden"
       } shadow-xl`}
     >
