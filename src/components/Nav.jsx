@@ -15,7 +15,7 @@ export default function Nav({cartNotify, count}) {
   }
   return (
     <nav className={`bg-white border-gray-200 flex justify-between `}>
-    <Cart toggleCart={isCart}/>
+    <Cart toggleCart={isCart} checkout = {cartNotify}/>
       <div className="flex items-center gap-5 p-6">
         <button onClick={handleSideMenu}>
           <img
