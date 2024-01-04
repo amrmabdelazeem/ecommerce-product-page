@@ -5,7 +5,7 @@ import { products } from "../products";
 export default function Product({onIncrease, onDecrease, count, onCart}) {
   
   return (
-    <section className="p-6">
+    <section className="p-6 mb-10">
       <p className="font-700 text-xs tracking-widest text-primary mb-3">
         {products.company}
       </p>
@@ -26,7 +26,7 @@ export default function Product({onIncrease, onDecrease, count, onCart}) {
       </div>
       <div
         id="products-count"
-        className=" max-w-xs w-full h-14 bg-gray-100 rounded-xl flex justify-between items-center px-5 mb-4"
+        className=" max-w-xs w-full h-12 bg-gray-100 rounded-xl flex justify-between items-center px-5 mb-4"
       >
         <button onClick={onDecrease}>
           <img
