@@ -21,7 +21,7 @@ export default function Carousel() {
     <section id="carousel" className="relative w-full h-80">
       <img
         src={`src/assets/images/image-product-${index}.jpg`}
-        alt={`product-${index}`}
+        alt={`Sneakrs product`}
         className="w-full h-full object-cover"
       />
       <button
@@ -30,7 +30,7 @@ export default function Carousel() {
       >
         <img
           src="src/assets/images/icon-next.svg"
-          alt="next-icon"
+          alt="Next icon an arrow to right to navigate product images"
           className="size-2"
         />
       </button>
@@ -40,7 +40,7 @@ export default function Carousel() {
       >
         <img
           src="src/assets/images/icon-previous.svg"
-          alt="prev-icon"
+          alt="Previous icon an arrow to left to navigate back product images"
           className="size-2"
         />
       </button>

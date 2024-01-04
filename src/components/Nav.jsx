@@ -28,14 +28,14 @@ export default function Nav({ cartNotify, count, onDelete }) {
           <img
             className="size-4"
             src="src/assets/images/icon-menu.svg"
-            alt="menu"
+            alt="Side menu with several navigation links"
           />
         </button>
         <a href="/">
           <img
             className="h-5"
             src="src/assets/images/logo.svg"
-            alt="page-logo"
+            alt="Page logo that is the sneakers word"
           />
         </a>
       </div>
@@ -44,7 +44,7 @@ export default function Nav({ cartNotify, count, onDelete }) {
           <img
             className="size-7"
             src="src/assets/images/icon-cart.svg"
-            alt="icon-cart"
+            alt="Cart icon where items are added"
           />
           <span
             className={`absolute bg-primary w-6 h-4 rounded-lg -top-1 text-xs text-white ${
@@ -57,7 +57,7 @@ export default function Nav({ cartNotify, count, onDelete }) {
         <img
           className="size-7"
           src="src/assets/images/image-avatar.png"
-          alt="avatar"
+          alt="Avatar of the current user"
         />
       </div>
       <div
@@ -69,7 +69,7 @@ export default function Nav({ cartNotify, count, onDelete }) {
           <img
             className="size-5 mb-10"
             src="src/assets/images/icon-close.svg"
-            alt="close-icon"
+            alt="Close icon shaped like X to hide the side menu"
           />
         </button>
         <ul>
