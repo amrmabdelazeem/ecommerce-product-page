@@ -8,15 +8,19 @@ export default function App() {
   const[cartState, setCartState] = useState(false);
   
   function handleCartItems(){
-    setCartState(!cartState);
+    if(count > 0){
+      setCartState(!cartState);
+    }
   }
 
   function handleIncrease() {
     setCount(count + 1);
+    setCartState(false);
   }
   function handleDecrease() {
     if (count > 0) {
       setCount(count - 1);
+      setCartState(false);
     }
   }
 
