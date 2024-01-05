@@ -16,11 +16,11 @@ export default function Checkout({ cartNotify, count, onDelete }) {
             alt="product-thumbnail"
           />
           <div id="cart-items">
-            <p className="text-gray-400 mb-1">{products.product_name}</p>
+            <p className="text-gray-400 mb-1">{products[0].product_name}</p>
             <p className="text-gray-400">
-              ${products.final_price} x {count}{" "}
+              ${products[0].final_price} x {count}{" "}
               <span className="text-black font-700">
-                ${(count * parseInt(products.final_price)).toFixed(2)}
+                ${(count * parseInt(products[0].final_price)).toFixed(2)}
               </span>
             </p>
           </div>

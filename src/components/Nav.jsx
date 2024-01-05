@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Cart from "./Cart";
 
-export default function Nav({ cartNotify, count, onDelete }) {
+export default function Nav({ cartNotify, count, onDelete}) {
   const [isClicked, setIsClicked] = useState(false);
   const [isCart, setIsCart] = useState(false);
 
@@ -77,7 +77,7 @@ export default function Nav({ cartNotify, count, onDelete }) {
               cartNotify ? "visible" : "hidden"
             } z-0`}
           >
-            {count}
+            {1}
           </span>
         </button>
         <img
