@@ -1,8 +1,10 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 
-export default function Carousel() {
+export default function Carousel({onBox}) {
   const [index, setIndex] = useState(1);
   const [current, SetCurrent] = useState(false);
+  
 
   let lastItem = 4;
   function handleNext() {
@@ -19,6 +21,7 @@ export default function Carousel() {
   function handleClick() {
     SetCurrent(!current);
   }
+
   return (
     <section
       id="carousel"
@@ -28,6 +31,7 @@ export default function Carousel() {
         src={`src/assets/images/image-product-${index}.jpg`}
         alt={`Sneakrs product`}
         className="w-full h-full object-cover xl:object-cover xl:rounded-2xl xl:w-9/12"
+        onClick={onBox}
       />
       <div
         id="gallery"
