@@ -31,7 +31,7 @@ export default function App() {
     <>
       <Nav cartNotify={cartState} count={count} onDelete={handleDelete}/>
       <Carousel />
-      <Product onIncrease = {handleIncrease} onDecrease = {handleDecrease} count={count} onCart={handleCartItems}/>
+      <Product onIncrease = {handleIncrease} onDecrease = {handleDecrease} count={count} onCart={handleCartItems} />
     </>
   );
 }
