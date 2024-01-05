@@ -9,7 +9,7 @@ export default function Cart({ toggleCart, cartNotify, count, onDelete }) {
       } shadow-xl z-10 xl:right-14 xl:top-24`}
     >
       <h2 className="font-700 p-5">Cart</h2>
-      <Checkout cartNotify={cartNotify} count={count} onDelete={onDelete} />
+      <Checkout cartNotify={cartNotify} count={count} onDelete={onDelete}/>
     </div>
   );
 }
