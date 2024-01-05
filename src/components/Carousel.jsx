@@ -2,9 +2,9 @@ import { useState } from "react";
 
 export default function Carousel() {
   const [index, setIndex] = useState(1);
+  const [current, SetCurrent] = useState(false);
 
   let lastItem = 4;
-
   function handleNext() {
     if (index < lastItem) {
       setIndex(index + 1);
@@ -16,18 +16,37 @@ export default function Carousel() {
       setIndex(index - 1);
     }
   }
+  function handleClick() {
+    SetCurrent(!current);
+  }
   return (
-    <section id="carousel" className="relative w-full h-80 xl:h-full xl:grid xl:place-items-center">
+    <section
+      id="carousel"
+      className="relative w-full h-80 xl:h-full xl:grid xl:place-items-center"
+    >
       <img
         src={`src/assets/images/image-product-${index}.jpg`}
         alt={`Sneakrs product`}
         className="w-full h-full object-cover xl:object-cover xl:rounded-2xl xl:w-9/12"
       />
-      <div id="gallery" className="hidden xl:visible xl:mt-5 xl:grid xl:grid-cols-4 xl:gap-8">
-        <img className="size-20 rounded-lg cursor-pointer hover:opacity-65 active:opacity-30" src="src/assets/images/image-product-1-thumbnail.jpg" alt="" />
-        <img className="size-20 rounded-lg cursor-pointer hover:opacity-65" src="src/assets/images/image-product-2-thumbnail.jpg" alt="" />
-        <img className="size-20 rounded-lg cursor-pointer hover:opacity-65" src="src/assets/images/image-product-3-thumbnail.jpg" alt="" />
-        <img className="size-20 rounded-lg cursor-pointer hover:opacity-65" src="src/assets/images/image-product-4-thumbnail.jpg" alt="" />
+      <div
+        id="gallery"
+        className="hidden xl:visible xl:mt-5 xl:grid xl:grid-cols-4 xl:gap-8"
+      >
+          <button
+            onClick={handleClick}
+            className={`${
+              current ? "border-primary border-4 rounded-xl" : "border-none"
+            }`}
+          >
+            <img
+              className={`size-20 rounded-lg cursor-pointer hover:opacity-65 ${
+                current ? "opacity-65" : "border-none"
+              }`}
+              src={`src/assets/images/image-product-1-thumbnail.jpg`}
+              alt=""
+            />
+          </button>
       </div>
       <button
         onClick={handleNext}
