@@ -7,7 +7,8 @@ import Lightbox from "./components/Lightbox";
 export default function App() {
   const [count, setCount] = useState(0);
   const[cartState, setCartState] = useState(false);
-  
+  const [toggleBox, setToggleBox] = useState(false);
+
   function handleCartItems(){
     if(count > 0){
       setCartState(true);
@@ -27,13 +28,18 @@ export default function App() {
       setCartState(false);
     }
   }
-
+    function handleBox(){
+    setToggleBox(!toggleBox);
+  }
+  function handleXIcon(){
+    setToggleBox(false); 
+  }
   return (
     <>
       <Nav cartNotify={cartState} count={count} onDelete={handleDelete}/>
-      <Carousel />
+      <Carousel onBox={handleBox}/>
       <Product onIncrease = {handleIncrease} onDecrease = {handleDecrease} count={count} onCart={handleCartItems} />
-      <Lightbox/>
+      <Lightbox toggle= {toggleBox} onCloseBox={handleXIcon}/>
     </>
   );
 }
