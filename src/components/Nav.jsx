@@ -15,7 +15,7 @@ export default function Nav({ cartNotify, count, onDelete}) {
   }
   return (
     <nav className={`bg-white border-gray-200 flex justify-between xl:border-b-2 xl:border-gray-200 xl:pt-10 xl:pb-9 xl:mb-10 col-span-3`}>
-      <div className={`absolute w-screen h-160 bg-black opacity-55 top-0 left-0 z-20 ${isClicked ? "visible" : "hidden"}`}></div>
+      <div className={`absolute w-screen h-160 bg-black opacity-55 top-0 left-0 z-20 xl:h-full ${isClicked ? "visible" : "hidden"}`}></div>
 
       <Cart
         toggleCart={isCart}
