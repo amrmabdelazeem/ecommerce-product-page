@@ -5,7 +5,7 @@ import { products } from "../products";
 export default function Product({onIncrease, onDecrease, count, onCart}) {
   
   return (
-    <section className="p-6 mb-10 xl:grid xl:place-content-center">
+    <section className="p-6 mb-10 xl:mb-0 xl:grid xl:place-content-center">
       <p className="font-700 text-xs tracking-widest text-primary mb-3 xl:text-base xl:mb-5 xl:col-span-2">
         {products[0].company}
       </p>

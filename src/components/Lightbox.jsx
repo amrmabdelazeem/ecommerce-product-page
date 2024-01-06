@@ -15,7 +15,7 @@ export default function Lightbox({toggle, onCloseBox}) {
   ];
   return (
     <section id="lightbox" className={`xl:absolute xl:grid xl:h-full w-3/4 xl:place-content-center xl:place-items-center z-30 ${toggle ? 'xl:visible' : 'xl:hidden'}`}>
-    <div className={`absolute w-screen h-full bg-black opacity-55 top-0 left-0 -z-10 ${toggle ? "visible" : "hidden" }`}></div>
+    <div className={`absolute w-screen h-screen bg-black opacity-55 top-0 left-0 -z-10 ${toggle ? "visible" : "hidden" }`}></div>
       <button className="xl:place-self-end xl:size-6 xl:mb-3">
         <img className="xl:size-6 "
           src="src/assets/images/icon-close.svg"
