@@ -24,10 +24,6 @@ export default function Carousel({ onBox }) {
       setIndex(index - 1);
     }
   }
-  function handleClick() {
-    SetCurrent(!current);
-    
-  }
 
   function handleProductToShow(id){
     setIndex(id +1);
@@ -36,12 +32,12 @@ export default function Carousel({ onBox }) {
   return (
     <section
       id="carousel"
-      className="relative w-full h-80 xl:h-full xl:grid xl:place-items-center"
+      className="relative w-full xl:w-95 h-80 xl:h-full xl:grid xl:place-items-center place-self-end"
     >
       <img
         src={`src/assets/images/image-product-${index}.jpg`}
         alt={`Sneakrs product`}
-        className="w-full h-full object-cover xl:object-cover xl:rounded-2xl xl:w-8/12"
+        className=" w-full max-h-full object-cover xl:object-cover xl:rounded-2xl xl:w-8/12 xl:max-w-md"
         onClick={onBox}
       />
       <div
@@ -56,14 +52,9 @@ export default function Carousel({ onBox }) {
               onClick={()=>{
                 handleProductToShow(id);
               }}
-              className={`${
-                current ? "border-primary border-4 rounded-xl" : "border-none"
-              }`}
             >
               <img
-                className={`size-20 rounded-lg cursor-pointer hover:opacity-65 ${
-                  current ? "opacity-65" : "border-none"
-                }`}
+                className={`size-20 rounded-lg cursor-pointer hover:opacity-65`}
                 src={thumbnail}
                 alt=""
               />
