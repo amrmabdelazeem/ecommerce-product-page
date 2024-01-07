@@ -58,7 +58,7 @@ export default function Lightbox({toggle, onCloseBox}) {
       <div className="">
         {thumbnails.map((thumbnail, index)=>{
             return(
-            <button  key={index} id={index} title={`thumbnail${index}`} onClick={()=>handleProductImage(index+1)}>
+            <button  key={index} title={`thumbnail${index}`} onClick={()=>handleProductImage(index+1)}>
                 <img className="size-24 rounded-lg cursor-pointer xl:mx-4" src={thumbnail} alt="image thumbnail" />
             </button>
             )
