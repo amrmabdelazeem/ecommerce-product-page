@@ -3,7 +3,6 @@ import { useState } from "react";
 
 export default function Carousel({ onBox }) {
   const [index, setIndex] = useState(1);
-  const [current, SetCurrent] = useState(false);
 
   const thumbnails = [
     "src/assets/images/image-product-1-thumbnail.jpg",
@@ -26,13 +25,13 @@ export default function Carousel({ onBox }) {
   }
 
   function handleProductToShow(id){
-    setIndex(id +1);
+    setIndex(id + 1);
   }
 
   return (
     <section
       id="carousel"
-      className="relative w-full xl:w-95 h-80 xl:h-full xl:grid xl:place-items-center place-self-end"
+      className="relative w-full xl:w-95 h-80 xl:h-full xl:grid xl:place-items-center place-self-end xl:pb-16"
     >
       <img
         src={`src/assets/images/image-product-${index}.jpg`}
@@ -54,9 +53,9 @@ export default function Carousel({ onBox }) {
               }}
             >
               <img
-                className={`size-20 rounded-lg cursor-pointer hover:opacity-65`}
+                className={`size-20 rounded-lg cursor-pointer hover:opacity-65 ${id + 1 === index ? 'border-4 border-primary opacity-65' : 'border-none' }`}
                 src={thumbnail}
-                alt=""
+                alt="Product images thumbnails"
               />
             </button>
           );
