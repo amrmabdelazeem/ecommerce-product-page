@@ -25,7 +25,7 @@ export default function Nav({ cartNotify, count, onDelete}) {
         onDelete={onDelete}
       />
       <div className="flex items-center gap-3 p-6 xl:gap-16  xl:justify-center xl:p-0">
-        <button onClick={handleSideMenu} className="xl:hidden">
+        <button onClick={handleSideMenu} className="xl:hidden" title="icon-menu">
           <img
             className="w-5 h-4"
             src="assets/images/icon-menu.svg"
@@ -44,7 +44,7 @@ export default function Nav({ cartNotify, count, onDelete}) {
           isClicked ? "visible" : "hidden"
         } z-20 xl:static xl:bg-transparent xl:w-full xl:h-auto xl:p-0 xl:pt-0 xl:flex`}
       >
-        <button onClick={handleSideMenu}>
+        <button onClick={handleSideMenu} title="icon-close">
           <img
             className="size-5 mb-10 xl:hidden xl:mb-0"
             src="assets/images/icon-close.svg"
@@ -71,7 +71,7 @@ export default function Nav({ cartNotify, count, onDelete}) {
       </div>
       </div>
       <div className="flex items-center gap-4 p-6  xl:gap-10  xl:p-0">
-        <button className="relative " onClick={handleCart}>
+        <button className="relative " onClick={handleCart} title="icon-cart">
         <svg className="size-5 xl:size-8 xl:fill-gray-400 xl:hover:fill-black" viewBox="0 0 25 25"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"/></svg>
           <span
             className={`absolute bg-primary w-6 h-4 rounded-xl -top-1 text-xs text-white ${

@@ -26,13 +26,14 @@ export default function Lightbox({toggle, onCloseBox}) {
   return (
     <section id="lightbox" className={`xl:absolute xl:pt-36 xl:grid xl:h-full w-full gap-y-4 xl:place-content-center xl:place-items-center z-30 hidden ${toggle ? 'xl:visible' : 'xl:hidden'}`}>
     <div className={`absolute w-screen h-120 bg-black opacity-55 top-0 left-0 -z-10 ${toggle ? "visible" : "hidden" }`}></div>
-      <button className="xl:place-self-end xl:size-6 xl:mb-3" onClick={onCloseBox}>
+      <button className="xl:place-self-end xl:size-6 xl:mb-3" onClick={onCloseBox} title="close-icon">
       <svg className="size-10 fill-white"
       viewBox="0 0 25 25"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"/></svg>
       </button>
       <div className="relative">
       <img className="relative xl:w-550 xl:h-550 xl:grid xl:place-items-center xl:mb-4 xl:rounded-2xl" src={`assets/images/image-product-${currentProduct}.jpg`} alt="" />
       <button
+      title="next-icon"
       onClick={handleNext}
         className="absolute top-1/2 -right-8 size-16 bg-white rounded-full flex items-center justify-center z-0"
       >
@@ -43,6 +44,7 @@ export default function Lightbox({toggle, onCloseBox}) {
         />
       </button>
       <button
+      title="prev-icon"
       onClick={handlePrev}
         className="absolute top-1/2 -left-8 size-16 bg-white rounded-full flex items-center justify-center z-0"
       >
@@ -56,7 +58,7 @@ export default function Lightbox({toggle, onCloseBox}) {
       <div className="">
         {thumbnails.map((thumbnail, index)=>{
             return(
-            <button  key={index} id={index} onClick={()=>handleProductImage(index+1)}>
+            <button  key={index} id={index} title={`thumbnail${index}`} onClick={()=>handleProductImage(index+1)}>
                 <img className="size-24 rounded-lg cursor-pointer xl:mx-4" src={thumbnail} alt="image thumbnail" />
             </button>
             )

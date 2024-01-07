@@ -25,7 +25,7 @@ export default function Checkout({ cartNotify, count, onDelete }) {
             </p>
           </div>
 
-          <button onClick={onDelete}>
+          <button onClick={onDelete} title="delete-icon">
             <svg
               className="fill-gray-300 size-5 justify-self-end"
               viewBox="0 0 20 20"

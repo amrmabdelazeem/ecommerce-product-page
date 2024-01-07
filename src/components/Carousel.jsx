@@ -48,6 +48,7 @@ export default function Carousel({ onBox }) {
             <button
               key={id}
               id={id}
+              title={`thumbnail${id}`}
               onClick={()=>{
                 handleProductToShow(id);
               }}
@@ -62,6 +63,7 @@ export default function Carousel({ onBox }) {
         })}
       </div>
       <button
+      title="next-arrow"
         onClick={handleNext}
         className="absolute top-1/2 right-5 size-6 bg-white rounded-full flex items-center justify-center z-0 xl:hidden"
       >
@@ -72,6 +74,7 @@ export default function Carousel({ onBox }) {
         />
       </button>
       <button
+      title="prev-arrow"
         onClick={handlePrev}
         className="absolute top-1/2 left-5 size-6 bg-white rounded-full flex items-center justify-center z-0 xl:hidden"
       >
