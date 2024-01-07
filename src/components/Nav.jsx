@@ -15,8 +15,8 @@ export default function Nav({ cartNotify, count, onDelete}) {
     setIsCart(!isCart);
   }
   return (
-    <nav className={`bg-white border-gray-200 flex justify-between xl:border-b-2 xl:border-gray-200 xl:pt-10 xl:pb-9 col-span-3 xl:mx-36 xl:mb-20`}>
-      <div className={`absolute w-screen h-150 bg-black opacity-55 top-0 xl:left-0 z-10 xl:h-130 ${isClicked ? "visible" : "hidden"}`}></div>
+    <nav className={`bg-white border-gray-200 flex justify-between xl:border-b-2 xl:border-gray-200 xl:pt-10 xl:pb-7 col-span-3 xl:mx-36 xl:mb-20`}>
+      <div className={`absolute w-full h-160 bg-black opacity-55 top-0 xl:left-0 z-10 xl:h-130 ${isClicked ? "visible" : "hidden"}`}></div>
 
       <Cart
         toggleCart={isCart}
@@ -40,7 +40,7 @@ export default function Nav({ cartNotify, count, onDelete}) {
           />
         </a>
         <div
-        className={`absolute w-60 h-150 bg-lightBlue left-0 top-0 p-6 pt-7 ${
+        className={`absolute w-60 h-160 bg-lightBlue left-0 top-0 p-6 pt-7 ${
           isClicked ? "visible" : "hidden"
         } z-20 xl:static xl:bg-transparent xl:w-full xl:h-auto xl:p-0 xl:pt-0 xl:flex`}
       >
