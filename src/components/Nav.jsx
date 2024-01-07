@@ -28,14 +28,14 @@ export default function Nav({ cartNotify, count, onDelete}) {
         <button onClick={handleSideMenu} className="xl:hidden">
           <img
             className="w-5 h-4"
-            src="src/assets/images/icon-menu.svg"
+            src="assets/images/icon-menu.svg"
             alt="Side menu with several navigation links"
           />
         </button>
         <a href="/">
           <img
             className="w-full h-4 xl:w-52 xl:h-5"
-            src="src/assets/images/logo.svg"
+            src="assets/images/logo.svg"
             alt="Page logo that is the sneakers word"
           />
         </a>
@@ -47,7 +47,7 @@ export default function Nav({ cartNotify, count, onDelete}) {
         <button onClick={handleSideMenu}>
           <img
             className="size-5 mb-10 xl:hidden xl:mb-0"
-            src="src/assets/images/icon-close.svg"
+            src="assets/images/icon-close.svg"
             alt="Close icon shaped like X to hide the side menu"
           />
         </button>
@@ -83,7 +83,7 @@ export default function Nav({ cartNotify, count, onDelete}) {
         </button>
         <img
           className="size-7 xl:size-16 xl:hover:border-primary xl:hover:border-2 xl:rounded-full cursor-pointer"
-          src="src/assets/images/image-avatar.png"
+          src="assets/images/image-avatar.png"
           alt="Avatar of the current user"
         />
       </div>

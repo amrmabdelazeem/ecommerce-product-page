@@ -12,7 +12,7 @@ export default function Checkout({ cartNotify, count, onDelete }) {
         >
           <img
             className="size-14 rounded-md justify-self-start"
-            src="src/assets/images/image-product-1-thumbnail.jpg"
+            src="assets/images/image-product-1-thumbnail.jpg"
             alt="product-thumbnail"
           />
           <div id="cart-items">

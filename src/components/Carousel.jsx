@@ -5,10 +5,10 @@ export default function Carousel({ onBox }) {
   const [index, setIndex] = useState(1);
 
   const thumbnails = [
-    "src/assets/images/image-product-1-thumbnail.jpg",
-    "src/assets/images/image-product-2-thumbnail.jpg",
-    "src/assets/images/image-product-3-thumbnail.jpg",
-    "src/assets/images/image-product-4-thumbnail.jpg",
+    "assets/images/image-product-1-thumbnail.jpg",
+    "assets/images/image-product-2-thumbnail.jpg",
+    "assets/images/image-product-3-thumbnail.jpg",
+    "assets/images/image-product-4-thumbnail.jpg",
   ];
 
   let lastItem = 4;
@@ -34,7 +34,7 @@ export default function Carousel({ onBox }) {
       className="relative w-full xl:w-95 h-80 xl:h-full xl:grid xl:place-items-center place-self-end xl:pb-16"
     >
       <img
-        src={`src/assets/images/image-product-${index}.jpg`}
+        src={`assets/images/image-product-${index}.jpg`}
         alt={`Sneakrs product`}
         className=" w-full max-h-full object-cover xl:object-cover xl:rounded-2xl xl:w-8/12 xl:max-w-md"
         onClick={onBox}
@@ -66,7 +66,7 @@ export default function Carousel({ onBox }) {
         className="absolute top-1/2 right-5 size-6 bg-white rounded-full flex items-center justify-center z-0 xl:hidden"
       >
         <img
-          src="src/assets/images/icon-next.svg"
+          src="assets/images/icon-next.svg"
           alt="Next icon an arrow to right to navigate product images"
           className="size-2"
         />
@@ -76,7 +76,7 @@ export default function Carousel({ onBox }) {
         className="absolute top-1/2 left-5 size-6 bg-white rounded-full flex items-center justify-center z-0 xl:hidden"
       >
         <img
-          src="src/assets/images/icon-previous.svg"
+          src="assets/images/icon-previous.svg"
           alt="Previous icon an arrow to left to navigate back product images"
           className="size-2"
         />

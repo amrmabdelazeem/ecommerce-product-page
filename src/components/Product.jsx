@@ -31,7 +31,7 @@ export default function Product({onIncrease, onDecrease, count, onCart}) {
       >
         <button onClick={onDecrease}>
           <img
-            src="src/assets/images/icon-minus.svg"
+            src="assets/images/icon-minus.svg"
             alt="Minus icon to decrease number of items choosen for the cart"
             className="w-3 xl:hover:opacity-70"
           />
@@ -39,7 +39,7 @@ export default function Product({onIncrease, onDecrease, count, onCart}) {
         <span className="font-700">{count}</span>
         <button onClick={onIncrease}>
           <img
-            src="src/assets/images/icon-plus.svg"
+            src="assets/images/icon-plus.svg"
             alt="Plus icon to increase the number of items choosen for the cart"
             className="size-3 xl:hover:opacity-70"
           />
