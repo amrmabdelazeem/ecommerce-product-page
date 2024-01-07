@@ -8,7 +8,7 @@ export default function Checkout({ cartNotify, count, onDelete }) {
       {cartNotify ? (
         <div
           id="cart-items"
-          className="border-t-2 grid grid-cart grid-rows-2 place-content-center place-items-center h-3/4 p-4 "
+          className="relative border-t-2 grid grid-cart grid-rows-2 place-content-center place-items-center h-3/4 p-4 z-0"
         >
           <img
             className="size-14 rounded-md justify-self-start"
@@ -36,7 +36,7 @@ export default function Checkout({ cartNotify, count, onDelete }) {
               />
             </svg>
           </button>
-          <div className="col-span-3 w-full">
+          <div className="col-span-3 w-full h-14">
             <Button title={"Checkout"} />
           </div>
         </div>
