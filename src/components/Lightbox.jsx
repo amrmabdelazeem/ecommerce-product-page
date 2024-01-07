@@ -25,7 +25,7 @@ export default function Lightbox({toggle, onCloseBox}) {
   ];
   return (
     <section id="lightbox" className={`xl:absolute xl:grid xl:h-full w-full gap-y-4 xl:place-content-center xl:place-items-center z-30 hidden ${toggle ? 'xl:visible' : 'xl:hidden'}`}>
-    <div className={`absolute w-screen h-120 bg-black opacity-55 top-0 left-0 -z-10 ${toggle ? "visible" : "hidden" }`}></div>
+    <div className={`absolute w-screen h-full bg-black opacity-55 top-0 left-0 -z-10 ${toggle ? "visible" : "hidden" }`}></div>
       <button className="xl:place-self-end xl:size-6 xl:mb-3" onClick={onCloseBox}>
       <svg className="size-10 fill-white"
       viewBox="0 0 25 25"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"/></svg>
