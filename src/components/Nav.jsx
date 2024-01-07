@@ -78,7 +78,7 @@ export default function Nav({ cartNotify, count, onDelete}) {
               cartNotify ? "visible" : "hidden"
             } z-0`}
           >
-            {1}
+            {count}
           </span>
         </button>
         <img
