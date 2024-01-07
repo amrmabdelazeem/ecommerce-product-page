@@ -9,3 +9,6 @@
     grid-template-columns: 70px 1fr 30px;
 }
 
+.main-grid{
+    grid-template-columns: 550px 550px;
+}
